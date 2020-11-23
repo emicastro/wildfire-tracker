@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Map } from './components'
+import { Map, Loader } from './components'
 
 function App() {
   const [eventData, setEventData] = useState([])
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div>
-      { !loading ? <Map eventData={eventData} /> : <h1>Loading</h1> }
+      { !loading ? <Map eventData={eventData} /> : <Loader /> }
     </div>
   );
 }
